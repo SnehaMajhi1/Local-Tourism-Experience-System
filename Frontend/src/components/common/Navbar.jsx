@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Heart } from 'lucide-react'
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
 
         {/* Logo */}
-        <div className="flex flex-col">
+        <Link to="/" className="flex flex-col">
           <h1 className="font-['Cinzel'] text-2xl font-bold tracking-wide text-white">
             LOCAL TOURISM
           </h1>
@@ -15,46 +16,39 @@ const Navbar = () => {
           <span className="font-['Montserrat'] text-xs tracking-[0.25em] text-white/75">
             Experience Marketplace
           </span>
-        </div>
+        </Link>
 
         {/* Navigation */}
         <div className="flex items-center gap-8">
 
           <nav className="hidden items-center gap-8 md:flex">
-            <a
-              href="/"
-              className="text-sm font-medium text-[#d8a84e] transition-colors"
+            <Link
+              to="/"
+              className="text-sm font-medium text-white transition-colors hover:text-[#d8a84e]"
             >
               Home
-            </a>
+            </Link>
 
-            <a
-              href="/experiences"
-              className="text-sm font-medium text-white transition-colors hover:text-[#d8a84e]"
+            <Link
+              to="/experiences"
+              className="text-sm font-medium text-[#d8a84e] transition-colors"
             >
               Experiences
-            </a>
+            </Link>
 
-            <a
-              href="/hosts"
-              className="text-sm font-medium text-white transition-colors hover:text-[#d8a84e]"
-            >
-              Hosts
-            </a>
-
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="text-sm font-medium text-white transition-colors hover:text-[#d8a84e]"
             >
               About
-            </a>
+            </Link>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="text-sm font-medium text-white transition-colors hover:text-[#d8a84e]"
             >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Heart */}
@@ -66,22 +60,20 @@ const Navbar = () => {
           </button>
 
           {/* Login */}
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="text-sm font-medium text-white transition hover:text-[#d8a84e]"
           >
             Login
-          </a>
+          </Link>
 
-     
-
-{/* Sign Up */}
-<a
-  href="/signup"
-  className="rounded-[10px] bg-[#0C5C39] px-5 py-3 text-sm font-semibold text-white"
->
-  Sign Up
-</a>
+          {/* Sign Up */}
+          <Link
+            to="/signup"
+            className="rounded-[10px] bg-[#0C5C39] px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-900 transition"
+          >
+            Sign Up
+          </Link>
 
         </div>
       </div>
